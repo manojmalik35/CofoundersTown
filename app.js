@@ -5,6 +5,8 @@ const { CORS } = require("./middlewares/cors")
 require("dotenv").config();
 require("./config/connection")
 const authRouter = require("./routers/authRouter")
+const userRouter = require("./routers/userRouter")
+const articleRouter = require("./routers/articleRouter");
 
 const app = express();
 
@@ -23,7 +25,9 @@ appRouter.get("/ping", function (req, res) {
     })
 })
 
-appRouter.use("/users", authRouter)
+appRouter.use("/auth", authRouter)
+appRouter.use("/users", userRouter)
+appRouter.use("/articles", articleRouter)
 
 app.use("*", function (req, res) {
     res.status(404).json({

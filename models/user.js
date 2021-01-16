@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
         min: 18,
         max: 102
     },
+    articles : [{
+        type : mongoose.Types.ObjectId,
+        ref : 'Article'
+    }]
 }, { timestamps: true })
 
 const User = mongoose.model("User", userSchema);

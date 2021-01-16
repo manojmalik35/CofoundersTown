@@ -1,4 +1,5 @@
 const validator = require("validator");
+const ObjectId = require('mongoose').Types.ObjectId;
 
 function validateSignup(inputs) {
     let errors = {};
@@ -47,7 +48,17 @@ function validateLogin(inputs) {
         return errors;
 }
 
+function validateObjectID(id) {
+    return ObjectId.isValid(id) && new ObjectId(id) == id
+}
+
+function validateJWT(token) {
+    return validator.isJWT(token);
+}
+
 module.exports = {
     validateSignup,
-    validateLogin
+    validateLogin,
+    validateObjectID,
+    validateJWT
 }

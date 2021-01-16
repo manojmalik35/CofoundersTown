@@ -4,7 +4,7 @@ const UserValidator = require("../validators/userValidator")
 const { JWT_KEY, CRYPTO_ROUNDS } = require("../config")
 const User = require("../models/user")
 
-class authService {
+class AuthService {
 
     async Signup(payload) {
 
@@ -49,4 +49,4 @@ class authService {
     }
 }
 
-module.exports = authService;
+module.exports = AuthService;
