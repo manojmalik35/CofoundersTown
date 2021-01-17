@@ -1,0 +1,13 @@
+.empty-state-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.img-style {
+  max-width: 30rem;
+  border-radius: 5%;
+  margin-bottom: 2rem;
+}

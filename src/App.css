@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-layout-content {
+  min-height: 81vh;
+  padding: 24px;
+  background: white;
+}
+
+.home-heading {
+  justify-content: center;
+}
+
+.main-heading {
+  margin-left: 35rem;
+  margin-bottom: 3rem;
+  font-size: xxx-large;
+}
+
+.main-button {
+  margin-left: 43rem;
+  font-size: xx-large;
+  margin-bottom: 4rem;
+}
+
+.home-content {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  height: 4rem;
+  width: 14rem;
+}

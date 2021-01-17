@@ -1,0 +1,12 @@
+.error-modal {
+    text-align: center;
+}
+
+.error-title {
+    margin: 1rem 0 1rem;
+    color: red;
+}
+
+.error-description {
+    font-size: 1.3rem;
+}
