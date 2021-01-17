@@ -3,6 +3,7 @@ const controller = require("../controllers/articleController");
 const { isLoggedIn } = require("../middlewares/auth")
 
 articleRouter.post("", isLoggedIn(), controller.publishArticle)
+articleRouter.get("", controller.getAllArticles)
 articleRouter.get("/:id", isLoggedIn(), controller.getSpecificArticle)
 
 module.exports = articleRouter;

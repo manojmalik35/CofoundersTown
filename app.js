@@ -30,10 +30,17 @@ appRouter.use("/users", userRouter)
 appRouter.use("/articles", articleRouter)
 
 app.use("*", function (req, res) {
-    res.status(404).json({
+    res.status(http.NOT_FOUND).json({
         message: "Page not found"
     })
 })
+
+//Error handler
+// app.use(function(err, req, res, next){
+//     res.status(http.INTERNAL_SERVER_ERROR).json({
+//         errors : err.message
+//     })
+// })
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {

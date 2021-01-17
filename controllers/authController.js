@@ -1,6 +1,6 @@
 const http = require("http-status-codes").StatusCodes
 const AuthService = require("../services/authService");
-const { transformUser } = require("../transformers/user")
+const { transformUser } = require('../transformers/user');
 
 const authService = new AuthService();
 
