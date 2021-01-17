@@ -9,8 +9,8 @@ function validateCreate(inputs) {
 
     if (!inputs.description)
         errors.description = "Description is required.";
-    else if (!validator.isLength(inputs.description, { min: 6, max: 50 }))
-        errors.description = "Description must be between 6 and 50 characters.";
+    else if (!validator.isLength(inputs.description, { min: 6, max: 100 }))
+        errors.description = "Description must be between 6 and 100 characters.";
 
     if (!inputs.body)
         errors.body = "Body is required.";
