@@ -22,6 +22,9 @@ function validateSignup(inputs) {
         errors.name = "Name is required.";
     else if (!validator.isAlpha(validator.blacklist(inputs.name, ' ')))
         errors.name = "Name cannot contain any numbers or special characters.";
+    else if(!validator.isLength(inputs.name, { min: 3 }))
+        errors.name = "Name must be at least 3 characters";
+
 
     if (inputs.age) {
         if (inputs.age < 18 || inputs.age > 100)
